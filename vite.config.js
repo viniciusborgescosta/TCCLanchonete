@@ -6,6 +6,7 @@ import path from 'node:path'
 export default defineConfig({
   plugins: [react()],
 
+  base: '/TCCLanchonete/',
   resolve: {
     alias: {
       // Permite imports como: import Button from '@/components/common/Button/Button'
