@@ -11,7 +11,7 @@ O principal objetivo do nosso site OnePage, em um cenário fictício, é que o c
 
 - Nossa OnePage conta com um cabeçalho fixo que se mantém na mesma posição enquanto o usuário navega pelo site;
 
-- Clicando no texto "HOME" no canto superior esquero do cabeçalho, o usuário é redirecionado automaticamente para o início da página;
+- Clicando no ícone de "casinha" no canto superior esquero do cabeçalho, o usuário é redirecionado automaticamente para o início da página;
 
 - O usuário pode alternar entre os temas claro e escuro do site apenas clicando no ícone no canto superior direito do cabeçalho;
 

@@ -1,10 +1,27 @@
+.carrossel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
 .containerproduct {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
     gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
 }
+
+
 
 .containerLanchesClaro, 
 .containerBebidasClaro,
@@ -45,7 +62,7 @@
 }
 
 .imagemproduto {
-    width: 30vh;
+    width: 20vh;
     border-radius: 10px;
     align-self: center;
 }
@@ -74,6 +91,46 @@
     color: rgb(204, 139, 0);
 }
 
+/* Esconde a barra de rolagem no Chrome, Edge e Safari */
+.containerproduct::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cada produto ocupa uma largura fixa */
+.containerproduct > div {
+    flex: 0 0 250px;
+    min-width: 0;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+/* Setinhas do carrossel */
+.seta-carrossel {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s;
+}
+
+.seta-carrossel:hover {
+    background-color: #555;
+}
+
+
 @media (max-width: 1200px) {
     .containerproduct {
         font-size: smaller;
@@ -87,9 +144,24 @@
 @media (max-width: 800px) {
     .containerproduct {
         font-size: x-small;
+        gap: 10px;
+    }
+
+    .carrossel {
+        gap: 5px;
     }
 
     .imagemproduto {
         width: 10vh;
+    }
+
+    .containerproduct > div {
+        flex-basis: 220px;
+    }
+
+    .seta-carrossel {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
     }
 }

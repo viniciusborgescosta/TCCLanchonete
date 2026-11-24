@@ -2,6 +2,7 @@
 import './Header.css';
 
 // Images
+import HomeIcon from '@/assets/images/icons/home.png';
 import LightMode from '@/assets/images/icons/light_mode.png';
 import DarkMode from '@/assets/images/icons/dark_mode.png';
 
@@ -9,7 +10,7 @@ function Header ({ claro, setClaro }) {
 
     return (
         <header className={claro ? 'headerclaro' : 'headerescuro'}>
-            <a href="#inicio" title='Voltar ao início'>HOME</a>
+            <a href="#inicio" title='Voltar ao início'><img src={HomeIcon} alt="" /></a>
             <h1>🍔 LANCHONETE 🥤</h1>
             <img src={claro == true ? LightMode : DarkMode} alt="Mudar tema" title='Mudar tema' onClick={() => setClaro(!claro)} />
         </header>
