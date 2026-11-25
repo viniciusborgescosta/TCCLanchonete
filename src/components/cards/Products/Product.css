@@ -11,17 +11,17 @@
     flex: 1;
     min-width: 0;
     gap: 24px;
-
     overflow-x: auto;
     overflow-y: hidden;
-
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-
     scrollbar-width: none;
 }
 
-
+.containerproduct a {
+    align-self: center;
+    text-decoration: none;
+}
 
 .containerLanchesClaro, 
 .containerBebidasClaro,
